@@ -16,9 +16,9 @@ import { resolveSrcFromSrcSet } from '~/utils/image';
 import { cssProps } from '~/utils/style';
 import { cleanRenderer, cleanScene, textureLoader } from '~/utils/three';
 import styles from './carousel.module.css';
-import fragment from './carousel-fragment.glsl?raw';
-import vertex from './carousel-vertex.glsl?raw';
-
+// import vertex from './carousel-vertex.glsl?raw';
+// import { loadGLSL } from '~/utils/load-glsl';
+// const fragment = await loadGLSL('./carousel-fragment.glsl');
 function determineIndex(imageIndex, index, images, direction) {
   if (index !== null) return index;
   const length = images.length;

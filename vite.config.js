@@ -10,6 +10,7 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
+import glsl from 'vite-plugin-glsl'; // 👈 GLSL support ke liye
 
 export default defineConfig({
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
@@ -21,18 +22,30 @@ export default defineConfig({
   },
   plugins: [
     mdx({
-      rehypePlugins: [[rehypeImgSize, { dir: 'public' }], rehypeSlug, rehypePrism],
+      rehypePlugins: [
+        [rehypeImgSize, { dir: 'public' }],
+        rehypeSlug,
+        rehypePrism,
+      ],
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
       providerImportSource: '@mdx-js/react',
     }),
     remixCloudflareDevProxy(),
     remix({
+      // ✅ Add future flags here
+      future: {
+        v7_relativeSplatPath: true,
+        v7_fetcherPersist: true,
+        v7_normalizeFormMethod: true,
+        v7_throwAbortReason: true,
+      },
       routes(defineRoutes) {
-        return defineRoutes(route => {
+        return defineRoutes((route) => {
           route('/', 'routes/home/route.js', { index: true });
         });
       },
     }),
     jsconfigPaths(),
+    glsl(), // 👈 GLSL loader ko activate kar diya
   ],
 });

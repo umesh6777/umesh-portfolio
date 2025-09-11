@@ -20,10 +20,12 @@ import { Navbar } from '~/layouts/navbar';
 import { Progress } from '~/components/progress';
 import config from '~/config.json';
 import styles from './root.module.css';
-import './reset.module.css';
-import './global.module.css';
+import globalStyles from './global.module.css';
+import resetStyles from './reset.module.css';
 
 export const links = () => [
+  { rel: 'stylesheet', href: resetStyles },
+  { rel: 'stylesheet', href: globalStyles },
   {
     rel: 'preload',
     href: GothamMedium,

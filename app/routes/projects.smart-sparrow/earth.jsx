@@ -1,11 +1,14 @@
-import earthModel from '~/assets/earth.glb';
-import mwnx from '~/assets/milkyway-nx.hdr';
-import mwny from '~/assets/milkyway-ny.hdr';
-import mwnz from '~/assets/milkyway-nz.hdr';
-import mwpx from '~/assets/milkyway-px.hdr';
-import mwpy from '~/assets/milkyway-py.hdr';
-import mwpz from '~/assets/milkyway-pz.hdr';
-import milkywayBg from '~/assets/milkyway.jpg';
+// 3D model
+const earthModel = "/earth.glb";
+// Milky Way cube textures
+const mwnx = "/milkyway-nx.hdr";
+const mwny = "/milkyway-ny.hdr";
+const mwnz = "/milkyway-nz.hdr";
+const mwpx = "/milkyway-px.hdr";
+const mwpy = "/milkyway-py.hdr";
+const mwpz = "/milkyway-pz.hdr";
+// Background image
+const milkywayBg = "/milkyway.jpg";
 import { Loader } from '~/components/loader';
 import { Section } from '~/components/section';
 import { tokens } from '~/components/theme-provider/theme';

@@ -1,10 +1,14 @@
-import vknx from '~/assets/volkihar-cube-nx.jpg';
-import vkny from '~/assets/volkihar-cube-ny.jpg';
-import vknz from '~/assets/volkihar-cube-nz.jpg';
-import vkpx from '~/assets/volkihar-cube-px.jpg';
-import vkpy from '~/assets/volkihar-cube-py.jpg';
-import vkpz from '~/assets/volkihar-cube-pz.jpg';
-import armor from '~/assets/volkihar-knight.glb';
+// Volkihar cube textures
+const vknx = "/volkihar-cube-nx.jpg";
+const vkny = "/volkihar-cube-ny.jpg";
+const vknz = "/volkihar-cube-nz.jpg";
+const vkpx = "/volkihar-cube-px.jpg";
+const vkpy = "/volkihar-cube-py.jpg";
+const vkpz = "/volkihar-cube-pz.jpg";
+
+// 3D model
+const armor = "/volkihar-knight.glb";
+
 import { Loader } from '~/components/loader';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
