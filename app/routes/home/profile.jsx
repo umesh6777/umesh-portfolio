@@ -18,32 +18,42 @@ import styles from './profile.module.css';
 
 
 const ProfileText = ({ visible, titleId }) => (
-<Fragment>
-  <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-    <DecoderText text="Hi there" start={visible} delay={500} />
-  </Heading>
-  <Text className={styles.description} data-visible={visible} size="l" as="p">
-    I’m Umesh, a passionate and result-driven <strong>Full-Stack Developer</strong> with
-    3+ years of experience designing and delivering scalable, high-performance web
-    applications. I specialize in{' '}
-    <Link href="https://angular.io">Angular</Link>,{' '}
-    <Link href="https://react.dev">React</Link>,{' '}
-    <Link href="https://nodejs.org">Node.js</Link>,{' '}
-    <Link href="https://nextjs.org">Next.js</Link>, and cloud-native development.
-    Skilled in frontend UI/UX and backend API integrations, I enjoy building reusable
-    components and solving complex problems to deliver enterprise-grade solutions.
-  </Text>
-  <Text className={styles.description} data-visible={visible} size="l" as="p">
-    Over the years, I’ve worked across industries including healthcare, government
-    systems, and SaaS platforms. I’ve also gained hands-on experience with Docker,
-    GitLab, and Bitbucket while collaborating with cross-functional teams. Outside of
-    work, I like exploring new frameworks, optimizing performance techniques, and
-    staying updated with modern development practices. Always open to exciting
-    opportunities, so feel free to drop me a line! If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
-  </Text>
-</Fragment>
+  <Fragment>
+    <Heading
+      className={styles.title}
+      data-visible={visible}
+      level={3}
+      id={titleId}
+    >
+      <DecoderText text="Hi there" start={visible} delay={500} />
+    </Heading>
+
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I’m Umesh, a <strong>Frontend Developer</strong> with over{' '}
+      <strong>2+ years of experience</strong> building scalable web applications.
+      I work primarily with{' '}
+      <Link href="https://angular.io">Angular</Link> and{' '}
+      <Link href="https://react.dev">React</Link>, along with JavaScript, HTML, and CSS,
+      focusing on clean UI development and reusable components.
+    </Text>
+
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I have hands-on experience integrating REST APIs, building forms and
+      data-driven screens, and maintaining stable frontend applications.
+      I’ve worked on projects across healthcare, government systems, and SaaS
+      platforms, collaborating with backend and QA teams in Agile environments.
+    </Text>
+
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      I enjoy improving UI performance, maintaining clean code, and continuously
+      learning modern frontend practices. Always open to new opportunities—feel free
+      to reach out. If you’re interested in the tools I use, you can check out my{' '}
+      <Link href="/uses">uses page</Link>.
+    </Text>
+  </Fragment>
 );
+
+
 
 export const Profile = ({ id, visible, sectionRef }) => {
   const [focused, setFocused] = useState(false);
